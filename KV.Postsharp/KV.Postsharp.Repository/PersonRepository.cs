@@ -5,25 +5,25 @@ namespace KV.Postsharp.Repository
 {
     public class PersonRepository
     {
-        [InsertProfilerLog]
+        [GenericProfiler(ActionLogEnum.Insert)]
         public void Insert(Person person)
         {
             //INSERT PERSON
         }
 
-        [UpdateProfilerLog]
+        [GenericProfiler(ActionLogEnum.Update)]
         public void Update(Person person)
         {
             //UPDATE PERSON
         }
 
-        [DeleteProfilerLog]
+        [GenericProfiler(ActionLogEnum.Delete)]
         public void Delete(long id)
         {
             //DELETE PERSON
         }
 
-        [SearchProfilerLog]
+        [GenericProfiler(ActionLogEnum.Search)]
         public void Search(string name, string surname)
         {
             //SEARCH PERSON

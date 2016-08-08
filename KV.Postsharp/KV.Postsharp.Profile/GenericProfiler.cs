@@ -1,19 +1,22 @@
 ﻿using log4net;
 using PostSharp.Aspects;
+using System;
 using System.Text;
 
 namespace KV.Postsharp.Profile
 {
-    public class Logger
+    [Serializable]
+    public class GenericProfiler : OnMethodBoundaryAspect
     {
-        private static void LogInformation(string information)
-        {            
-            LogManager.GetLogger("InformationLogger").Info(information);
+        private ActionLogEnum action;
+
+        public GenericProfiler(ActionLogEnum action)
+        {
+            this.action = action;
         }
 
-        public static void InsertLog(MethodExecutionArgs args, ActionLogEnum action)
+        public override void OnExit(MethodExecutionArgs args)
         {
-
             StringBuilder strObjectAction = new StringBuilder();
             strObjectAction.Append("Action: ");
             strObjectAction.Append(action.ToString());
@@ -24,7 +27,7 @@ namespace KV.Postsharp.Profile
             strObjectAction.Append("- Arguments Values: ");
             strObjectAction.Append(string.Join(",", args.Arguments.ToArray()));
 
-            LogInformation(strObjectAction.ToString());
+            LogManager.GetLogger("InformationLogger").Info(strObjectAction.ToString());
         }
     }
 }

@@ -50,12 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionLogEnum.cs" />
-    <Compile Include="DeleteProfilerLog.cs" />
-    <Compile Include="InsertProfilerLog.cs" />
-    <Compile Include="Logger.cs" />
+    <Compile Include="GenericProfiler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchProfilerLog.cs" />
-    <Compile Include="UpdateProfilerLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
