@@ -5,21 +5,22 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("KV.Postsharp.ConsoleApplication")]
+[assembly: AssemblyTitle("KV.Postsharp.Domain")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("KV.Postsharp.ConsoleApplication")]
+[assembly: AssemblyProduct("KV.Postsharp.Domain")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6a8c821d-29d4-48f2-94cf-8f4174ade678")]
+[assembly: Guid("dd525ac8-e1cd-4b99-b911-f088eddc09f5")]
 
 // Version information for an assembly consists of the following four values:
 //

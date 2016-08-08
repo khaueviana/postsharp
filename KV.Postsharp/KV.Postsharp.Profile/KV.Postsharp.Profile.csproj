@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6A8C821D-29D4-48F2-94CF-8F4174ADE678}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{0F1DF815-8808-42B8-8079-61D373E69DFC}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KV.Postsharp.ConsoleApplication</RootNamespace>
-    <AssemblyName>KV.Postsharp.ConsoleApplication</AssemblyName>
+    <RootNamespace>KV.Postsharp.Profile</RootNamespace>
+    <AssemblyName>KV.Postsharp.Profile</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <DontImportPostSharp>True</DontImportPostSharp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -52,22 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ActionLogEnum.cs" />
+    <Compile Include="DeleteProfilerLog.cs" />
+    <Compile Include="InsertProfilerLog.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchProfilerLog.cs" />
+    <Compile Include="UpdateProfilerLog.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KV.Postsharp.Domain\KV.Postsharp.Domain.csproj">
-      <Project>{DD525AC8-E1CD-4B99-B911-F088EDDC09F5}</Project>
-      <Name>KV.Postsharp.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\KV.Postsharp.Repository\KV.Postsharp.Repository.csproj">
-      <Project>{E333C5BC-D96C-442D-B17E-26322A86134D}</Project>
-      <Name>KV.Postsharp.Repository</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\PostSharp.4.3.16\tools\PostSharp.targets" Condition="Exists('..\packages\PostSharp.4.3.16\tools\PostSharp.targets')" />
