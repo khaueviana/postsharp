@@ -1,5 +1,4 @@
-postsharp
----------
+# postsharp
 
 Example of use of PostSharp library through aspect-oriented programming.
 
