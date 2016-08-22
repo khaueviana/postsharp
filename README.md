@@ -1,8 +1,9 @@
-# Postsharp Sample
+postsharp
+---------
 
-Exemplo da utilização da biblioteca Postsharp, através da programação orientada a aspecto.
+Example of use of PostSharp library through aspect-oriented programming.
 
-Para log das informações, foi utilizado Log4Net.
+To log the information was used Log4Net.
 
 **Postsharp**
 
